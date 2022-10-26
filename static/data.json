@@ -1,0 +1,51 @@
+[{
+  "id": 1,
+  "bakery": "habitasse",
+  "price": 48,
+  "sweetness": 4
+}, {
+  "id": 2,
+  "bakery": "ut erat",
+  "price": 35,
+  "sweetness": 8
+}, {
+  "id": 3,
+  "bakery": "phasellus in felis",
+  "price": 47,
+  "sweetness": 5
+}, {
+  "id": 4,
+  "bakery": "sit amet",
+  "price": 42,
+  "sweetness": 6
+}, {
+  "id": 5,
+  "bakery": "at feugiat non",
+  "price": 16,
+  "sweetness": 7
+}, {
+  "id": 6,
+  "bakery": "semper est quam",
+  "price": 58,
+  "sweetness": 9
+}, {
+  "id": 7,
+  "bakery": "pretium iaculis",
+  "price": 42,
+  "sweetness": 3
+}, {
+  "id": 8,
+  "bakery": "sociis natoque penatibus",
+  "price": 50,
+  "sweetness": 8
+}, {
+  "id": 9,
+  "bakery": "adipiscing",
+  "price": 34,
+  "sweetness": 9
+}, {
+  "id": 10,
+  "bakery": "gravida nisi",
+  "price": 45,
+  "sweetness": 0
+}]
