@@ -11,7 +11,7 @@
     <img src="/divider.svg" class="w-full">
     <section>
       <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
-      <div class="grid md:grid-cols-2 grid-cols-1 space-x-4 space-y-4">
+      <div class="grid lg:grid-cols-2 grid-cols-1 space-x-4 space-y-4">
         <card-small v-for="rating in data"
                     :bakery="rating.bakery"
                     :price="rating.price"
@@ -35,6 +35,11 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+  * p{
+    font-family: 'Inter', sans-serif;
+  }
 
   body{
     background-color: #FFEAD7;

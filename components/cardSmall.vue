@@ -1,11 +1,38 @@
 <template>
  <div class="card w-full flex">
    <div class="cardImg w-1/4" />
-   <div class="w-full relative w-3/4">
-     <p>{{ bakery }}</p>
-     <p>{{ price }}</p>
-     <p>{{ sweetness }}</p>
-     <img src="/cardbottom.svg" class="w-full h-auto bottom-0 left-0 absolute" />
+   <div class="w-full relative p-12 justify-between ">
+     <div class="data-block grid grid-cols-2 uppercase tracking-wider">
+       <div class="attribute">
+         <p>Location</p>
+       </div>
+       <div class="data">
+         <p>{{ bakery }}</p>
+       </div>
+     </div>
+
+     <hr />
+
+     <div class="data-block grid grid-cols-2 uppercase tracking-wider">
+       <div class="attribute">
+         <p>Price</p>
+       </div>
+       <div class="data">
+         <p>{{ price }}</p>
+       </div>
+     </div>
+
+     <hr />
+
+     <div class="data-block grid grid-cols-2 uppercase tracking-wider">
+       <div class="attribute">
+         <p>Price</p>
+       </div>
+       <div class="data">
+         <p>{{ sweetness }}</p>
+       </div>
+     </div>
+     <img src="/cardbottom.svg" class="w-full h-auto -bottom-1/5 left-0 absolute" />
    </div>
  </div>
 </template>
@@ -22,6 +49,22 @@ export default {
 </script>
 
 <style scoped>
+  .data-block{
+    @apply my-2;
+  }
+
+  .attribute{
+    font-weight: 400;
+    color: #AD7949;
+    @apply text-left;
+  }
+
+  .data{
+    font-weight: 600;
+    color: #724012;
+    @apply text-right;
+  }
+
   .card{
     background-color: #F8D5B6;
     overflow: hidden;
