@@ -1,7 +1,9 @@
 <template>
- <div class="card w-full flex">
-   <div class="cardImg w-1/4" />
-   <div class="w-full relative p-12 justify-between ">
+ <div class="card flex">
+   <div class="cardImg flex-none" >
+     <div class="tag">{{ sweetness }}</div>
+   </div>
+   <div class="w-full relative px-8 pt-6 justify-between ">
      <div class="data-block grid grid-cols-2 uppercase tracking-wider">
        <div class="attribute">
          <p>Location</p>
@@ -26,13 +28,16 @@
 
      <div class="data-block grid grid-cols-2 uppercase tracking-wider">
        <div class="attribute">
-         <p>Price</p>
+         <p>Sweetness</p>
        </div>
        <div class="data">
          <p>{{ sweetness }}</p>
        </div>
      </div>
-     <img src="/cardbottom.svg" class="w-full h-auto -bottom-1/5 left-0 absolute" />
+     <div class="w-full h-auto bottom-0 left-0 absolute cursor-pointer" >
+       <p class="absolute left-0 right-0 bottom-1/4 readMore">Read more</p>
+       <img class="w-full" src="/cardbottom.svg" />
+     </div>
    </div>
  </div>
 </template>
@@ -65,17 +70,34 @@ export default {
     @apply text-right;
   }
 
+  .readMore{
+    font-weight: 400;
+    color: #AD7949;
+    @apply uppercase tracking-wider;
+  }
+
   .card{
     background-color: #F8D5B6;
     overflow: hidden;
-    @apply rounded-2xl;
+    width: 532px;
+    height: 232px;
+    @apply rounded-2xl text-sm;
   }
 
   .cardImg{
-    border-right: 2px solid #FFF3E8;
+    border-right: 4px solid #FFF3E8;
     background-image: url("/img/example.jpeg");
     background-size: cover;
     background-position: center;
-    @apply w-48 h-48;
+    width: 232px;
+    height: 232px;
   }
+
+  .tag{
+    background-color: #FFF3E8;
+    color: #724012;
+    font-family: 'Playfair Display', serif;
+    @apply rounded-full p-4 w-14 h-14 m-4 text-2xl proportional-nums;
+  }
+
 </style>

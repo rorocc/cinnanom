@@ -11,7 +11,7 @@
     <img src="/divider.svg" class="w-full">
     <section>
       <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
-      <div class="grid lg:grid-cols-2 grid-cols-1 space-x-4 space-y-4">
+      <div class="grid lg:grid-cols-2 grid-cols-1 space-y-4 justify-around">
         <card-small v-for="rating in data"
                     :bakery="rating.bakery"
                     :price="rating.price"
