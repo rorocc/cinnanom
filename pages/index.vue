@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <section class="head">
+      <section class="head p-32">
         <h1>cinnanom</h1>
         <h2>Discover the world of cinnamon buns in Oslo.</h2>
       </section>

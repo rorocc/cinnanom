@@ -1,6 +1,6 @@
 <template>
  <div class="card flex">
-   <div class="cardImg flex-none" v-bind:style="{backgroundImage: 'url(/img/buns/id_' + id + '.jpg)'}">
+   <div class="cardImg flex-none" v-bind:style="{backgroundImage: 'url(./img/buns/id_' + id + '.jpg)'}">
      <div class="tag">{{ rating }}</div>
    </div>
    <div class="w-full relative px-8 pt-6 justify-between ">
