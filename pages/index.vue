@@ -11,6 +11,19 @@
       <path d="M227 89.5768C72 89.5768 11.6667 37.2435 -18.5 2.57683L-27 89.5768C80.5 155.475 177.5 158.679 317 131.077C456.5 103.475 647 21.4746 895 42.9746C1143 64.4746 1332.5 131.077 1332.5 131.077L1339 64.4746C1250.5 49.9746 1182 22.9746 908 2.57686C634 -17.8209 382 89.5768 227 89.5768Z" fill="#FFF3E8"/>
     </svg>
     <section>
+      <h1 class="gradient padding"><span>Facts about the project</span></h1>
+      <div class="grid md:grid-cols-3 grid-cols-1">
+        <counter :min="80" :max="141" :description="'NOKs spent on buns throughout the project'" />
+        <counter :min="1" :max="data.length" :description="'cinnamon buns rated'" />
+        <counter :min="2" :max="2" :description="'cinnanom-certified testers'" />
+      </div>
+    </section>
+
+    <svg class="w-full my-32" viewBox="0 0 1280 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M227 89.5768C72 89.5768 11.6667 37.2435 -18.5 2.57683L-27 89.5768C80.5 155.475 177.5 158.679 317 131.077C456.5 103.475 647 21.4746 895 42.9746C1143 64.4746 1332.5 131.077 1332.5 131.077L1339 64.4746C1250.5 49.9746 1182 22.9746 908 2.57686C634 -17.8209 382 89.5768 227 89.5768Z" fill="#FFF3E8"/>
+    </svg>
+
+    <section>
       <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
       <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
         <card-small class="mx-auto" v-for="rating in data"
@@ -88,6 +101,10 @@ export default {
 
   header{
     background-color: var(--bg-dark);
+  }
+
+  footer{
+    @apply mt-48;
   }
 
   footer div{
