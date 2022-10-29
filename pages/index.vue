@@ -4,11 +4,11 @@
       <h1>cinnanom</h1>
       <h2>Discover the world of cinnamon buns in Oslo.</h2>
     </section>
-    <img src="/divider.svg" class="w-full">
+    <img src="~/static/divider.svg" class="w-full">
     <section>
       <h1 class="gradient padding"><span>The greatest bun</span></h1>
     </section>
-    <img src="/divider.svg" class="w-full">
+    <img src="~/static/divider.svg" class="w-full">
     <section>
       <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
       <div class="grid lg:grid-cols-2 grid-cols-1 space-y-4 justify-around">

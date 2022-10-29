@@ -86,7 +86,7 @@ export default {
 
   .cardImg{
     border-right: 4px solid #FFF3E8;
-    background-image: url("/img/example.jpeg");
+    background-image: url("~/static/img/example.jpeg");
     background-size: cover;
     background-position: center;
     width: 232px;
