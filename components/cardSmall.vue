@@ -1,7 +1,7 @@
 <template>
  <div class="card flex">
-   <div class="cardImg flex-none" >
-     <div class="tag">{{ sweetness }}</div>
+   <div class="cardImg flex-none" v-bind:style="{backgroundImage: 'url(/img/buns/id_' + id + '.jpg)'}">
+     <div class="tag">{{ rating }}</div>
    </div>
    <div class="w-full relative px-8 pt-6 justify-between ">
      <div class="data-block grid grid-cols-2 uppercase tracking-wider">
@@ -20,7 +20,7 @@
          <p>Price</p>
        </div>
        <div class="data">
-         <p>{{ price }}</p>
+         <p>{{ price }} NOK</p>
        </div>
      </div>
 
@@ -34,9 +34,14 @@
          <p>{{ sweetness }}</p>
        </div>
      </div>
-     <div class="w-full h-auto bottom-0 left-0 absolute cursor-pointer" >
-       <p class="absolute left-0 right-0 bottom-1/4 readMore">Read more</p>
-       <img class="w-full" src="/cardbottom.svg" />
+     <div class="cardBottom" >
+       <div class="absolute left-0 right-0 bottom-1/4">
+         <p class="readMore inline-block pr-2">Read more</p>
+         <svg class="inline-block" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path d="M1 1L5 4.5L1 8" stroke="#C8986D" stroke-linecap="round" stroke-linejoin="round"/>
+         </svg>
+       </div>
+       <img class="w-full" src="~/static/cardbottom.svg" />
      </div>
    </div>
  </div>
@@ -46,7 +51,9 @@
 export default {
   name: "cardSmall",
   props: {
+    id: Number,
     bakery: String,
+    rating: Number,
     price: Number,
     sweetness: Number
   }
@@ -86,7 +93,6 @@ export default {
 
   .cardImg{
     border-right: 4px solid #FFF3E8;
-    background-image: url("~/static/img/example.jpeg");
     background-size: cover;
     background-position: center;
     width: 232px;
@@ -98,6 +104,19 @@ export default {
     color: #724012;
     font-family: 'Playfair Display', serif;
     @apply rounded-full p-4 w-14 h-14 m-4 text-2xl proportional-nums;
+  }
+
+  .cardBottom{
+    @apply w-full h-auto bottom-0 left-0 absolute cursor-pointer;
+  }
+
+  .cardBottom svg{
+    transition-duration: .25s;
+  }
+
+  .cardBottom:hover svg{
+    transition-duration: .25s;
+    transform: translateX(4px);
   }
 
 </style>

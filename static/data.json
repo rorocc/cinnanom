@@ -1,51 +1,70 @@
 [{
   "id": 1,
-  "bakery": "habitasse",
-  "price": 48,
-  "sweetness": 4
-}, {
+  "bakery": "SiO Spiseri",
+  "geo_lat": null,
+  "geo_long": null,
+  "rating": 6.29,
+  "smell": 5,
+  "aesthetic": 6,
+  "juiciness": 6,
+  "fluffiness": 6,
+  "cinnamon": 7,
+  "cardamom": false,
+  "sweetness": 8,
+  "taste": 6,
+  "price": 15,
+  "date": "2022-10-24",
+  "comment": "v buttery, tasted kinda good but too greasy overall"
+},
+  {
   "id": 2,
-  "bakery": "ut erat",
-  "price": 35,
-  "sweetness": 8
-}, {
+  "bakery": "W.B. Samson (Stortinget)",
+  "geo_lat": null,
+  "geo_long": null,
+  "rating": 8.71,
+  "smell": 8,
+  "aesthetic": 9,
+  "juiciness": 8,
+  "fluffiness": 8,
+  "cinnamon": 9.5,
+  "cardamom": false,
+  "sweetness": 9.5,
+  "taste": 9,
+  "price": 46,
+  "date": "2022-10-25",
+  "comment": "lovely optic, perfect amount of kanel + sugar, kanel in the dough, really juicy in the center"
+},{
   "id": 3,
-  "bakery": "phasellus in felis",
-  "price": 47,
-  "sweetness": 5
-}, {
+  "bakery": "United Bakeries (Nationaltheatret)",
+  "geo_lat": null,
+  "geo_long": null,
+  "rating": 6.71,
+  "smell": 6,
+  "aesthetic": 9,
+  "juiciness": 7,
+  "fluffiness": 8,
+  "cinnamon": 5,
+  "cardamom": true,
+  "sweetness": 6,
+  "taste": 6,
+  "price": 49,
+  "date": "2022-10-25",
+  "comment": "wenig süß + zimtig, Kardamomnote, optisch top, etwas trockener"
+},{
   "id": 4,
-  "bakery": "sit amet",
-  "price": 42,
-  "sweetness": 6
-}, {
-  "id": 5,
-  "bakery": "at feugiat non",
-  "price": 16,
-  "sweetness": 7
-}, {
-  "id": 6,
-  "bakery": "semper est quam",
-  "price": 58,
-  "sweetness": 9
-}, {
-  "id": 7,
-  "bakery": "pretium iaculis",
-  "price": 42,
-  "sweetness": 3
-}, {
-  "id": 8,
-  "bakery": "sociis natoque penatibus",
-  "price": 50,
-  "sweetness": 8
-}, {
-  "id": 9,
-  "bakery": "adipiscing",
-  "price": 34,
-  "sweetness": 9
-}, {
-  "id": 10,
-  "bakery": "gravida nisi",
-  "price": 45,
-  "sweetness": 0
+  "bakery": "Baker Hansen (Majorstuen)",
+  "geo_lat": null,
+  "geo_long": null,
+  "rating": 7.36,
+  "smell": 6.5,
+  "aesthetic": 8.5,
+  "juiciness": 6.5,
+  "fluffiness": 8,
+  "cinnamon": 6.5,
+  "cardamom": true,
+  "sweetness": 8,
+  "taste": 7.5,
+  "price": 31,
+  "date": "2022-10-25",
+  "comment": "looks good, kardamom, good level of sugar + kanel but could be more, cheap! 37 for eating in"
 }]

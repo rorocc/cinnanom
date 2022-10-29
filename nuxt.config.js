@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'cinnanom',
+    title: 'cinnanom - Oslo\'s world of cinnamon buns',
     htmlAttrs: {
       lang: 'en'
     },
