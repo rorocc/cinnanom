@@ -1,9 +1,16 @@
 <template>
   <div>
     <header>
-      <section class="head p-32">
-        <h1>cinnanom</h1>
-        <h2>Discover the world of cinnamon buns in Oslo.</h2>
+      <section class="head p-32 grid lg:grid-cols-2 grid-cols-1 text-left">
+        <div>
+          <bun class="w-1/2 mx-auto" />
+        </div>
+        <div class="flex">
+          <div class="m-auto">
+            <h1 class="title">cinna<span>nom</span></h1>
+            <h2>Discover the world of cinnamon buns in Oslo.</h2>
+          </div>
+        </div>
       </section>
     </header>
     <svg class="w-full" viewBox="0 0 1280 148" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,6 +94,20 @@ export default {
     font-family: 'Playfair Display', serif;
     color: var(--primary-color-dark);
     @apply text-4xl p-16;
+  }
+
+  h1.title{
+    @apply lg:text-8xl text-6xl p-0 py-6;
+  }
+
+  h1.title span{
+    color: var(--primary-color-light)
+  }
+
+  h2{
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color-dark);
+    @apply tracking-wide lg:text-xl text-lg;
   }
 
   h1.gradient span{
