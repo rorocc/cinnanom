@@ -1,8 +1,8 @@
 [{
   "id": 1,
   "bakery": "SiO Spiseri",
-  "geo_lat": null,
-  "geo_long": null,
+  "geo_lat": 59.94342,
+  "geo_long": 10.717823,
   "rating": 6.29,
   "smell": 5,
   "aesthetic": 6,
@@ -19,8 +19,8 @@
   {
   "id": 2,
   "bakery": "W.B. Samson (Stortinget)",
-  "geo_lat": null,
-  "geo_long": null,
+  "geo_lat": 59.9129,
+  "geo_long": 10.741507,
   "rating": 8.71,
   "smell": 8,
   "aesthetic": 9,
@@ -36,8 +36,8 @@
 },{
   "id": 3,
   "bakery": "United Bakeries (Nationaltheatret)",
-  "geo_lat": null,
-  "geo_long": null,
+  "geo_lat": 59.9151885,
+  "geo_long": 10.7340975,
   "rating": 6.71,
   "smell": 6,
   "aesthetic": 9,
@@ -53,8 +53,8 @@
 },{
   "id": 4,
   "bakery": "Baker Hansen (Majorstuen)",
-  "geo_lat": null,
-  "geo_long": null,
+  "geo_lat": 59.92953,
+  "geo_long": 10.716522,
   "rating": 7.36,
   "smell": 6.5,
   "aesthetic": 8.5,

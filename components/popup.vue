@@ -3,7 +3,12 @@
     <div class="popup-inner">
       <div class="side-left">
         <div class="side-img" v-bind:style="{backgroundImage: 'url(./img/buns/id_' + data.data.id + '.jpg)'}" />
-        <div class="side-map" v-bind:style="{backgroundImage: 'url(\'https://www.netmaps.net/wp-content/uploads/2016/03/Oslo-Vector-Map.jpg\')'}" ></div>
+        <div class="side-map" v-bind:style="{backgroundImage: 'url(\'https://www.netmaps.net/wp-content/uploads/2016/03/Oslo-Vector-Map.jpg\')'}" >
+          <l-map :zoom=13 :center="[data.data.geo_lat,data.data.geo_long]">
+            <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+             <l-marker :lat-lng="[data.data['geo_lat'],data.data['geo_long']]"></l-marker>
+          </l-map>
+        </div>
       </div>
       <div class="side-right grid grid-flow-row-dense">
         <div class="side-right-top relative">
