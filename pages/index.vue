@@ -34,7 +34,11 @@
       <popup v-if="popupData.visible">
         <h1>Popup</h1>
       </popup>
-      <h1 class="gradient padding mb-16"><span>Take a look at all the buns</span></h1>
+      <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
+      <select v-model="selected" class="mb-16 styled">
+        <option value="rating">Sort by <span>rating</span></option>
+        <option value="price">Sort by <span>price</span></option>
+      </select>
       <div class="grid lg:grid-cols-2 grid-cols-1 md:gap-8 gap-16">
         <card-small class="mx-auto" v-for="rating in data" @click="this.clickPopup(1)"
                     :id="rating.id"
@@ -67,7 +71,8 @@ export default {
       popupData: {
         data: null,
         visible: false
-      }
+      },
+      selected: 'rating'
     }
   },
   methods: {
@@ -145,4 +150,22 @@ export default {
     background-color: var(--bg-lightest);
     color: var(--primary-color-light);
   }
+
+  select{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    color: var(--primary-color-dark);
+    background-color: var(--bg-dark);
+    border: 2px solid var(--bg-lightest);
+    @apply px-8 py-4 rounded-2xl uppercase tracking-wide;
+  }
+
+  .styled select{
+    background-image: url("~/static/divider.svg");
+    background-position: right 10px top 50%;
+    background-repeat: no-repeat;
+    background-size: 10px;
+  }
+
 </style>
