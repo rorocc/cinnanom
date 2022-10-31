@@ -1,5 +1,5 @@
 <template>
- <div class="card flex">
+ <div class="card flex md:flex-nowrap flex-wrap">
    <div class="cardImg flex-none" v-bind:style="{backgroundImage: 'url(./img/buns/id_' + id + '.jpg)'}">
      <div class="tag">{{ rating }}</div>
    </div>
@@ -36,7 +36,7 @@
      </div>
      <div class="cardBottom" >
        <div class="absolute left-0 right-0 bottom-1/4">
-         <p class="readMore inline-block pr-2">Read more</p>
+         <p class="readMore inline-block pr-2">More details</p>
          <svg class="inline-block" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
            <path d="M1 1L5 4.5L1 8" stroke="#C8986D" stroke-linecap="round" stroke-linejoin="round"/>
          </svg>
@@ -117,6 +117,19 @@ export default {
   .cardBottom:hover svg{
     transition-duration: .25s;
     transform: translateX(4px);
+  }
+
+  @media only screen and (max-width: 768px) {
+    .card{
+      height: 532px;
+      @apply w-2/3;
+    }
+
+    .cardImg{
+      border-right: 0 solid #FFF3E8;
+      border-bottom: 4px solid #FFF3E8;
+      @apply w-full h-auto;
+    }
   }
 
 </style>

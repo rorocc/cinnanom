@@ -26,14 +26,17 @@
       </div>
     </section>
 
-    <svg class="w-full my-32" viewBox="0 0 1280 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="w-full mt-32" viewBox="0 0 1280 148" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M227 89.5768C72 89.5768 11.6667 37.2435 -18.5 2.57683L-27 89.5768C80.5 155.475 177.5 158.679 317 131.077C456.5 103.475 647 21.4746 895 42.9746C1143 64.4746 1332.5 131.077 1332.5 131.077L1339 64.4746C1250.5 49.9746 1182 22.9746 908 2.57686C634 -17.8209 382 89.5768 227 89.5768Z" fill="#FFF3E8"/>
     </svg>
 
     <section>
-      <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
-      <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
-        <card-small class="mx-auto" v-for="rating in data"
+      <popup v-if="popupData.visible">
+        <h1>Popup</h1>
+      </popup>
+      <h1 class="gradient padding mb-16"><span>Take a look at all the buns</span></h1>
+      <div class="grid lg:grid-cols-2 grid-cols-1 md:gap-8 gap-16">
+        <card-small class="mx-auto" v-for="rating in data" @click="this.clickPopup(1)"
                     :id="rating.id"
                     :bakery="rating.bakery"
                     :rating="rating.rating"
@@ -60,7 +63,17 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      data: ratingsData
+      data: ratingsData,
+      popupData: {
+        data: null,
+        visible: false
+      }
+    }
+  },
+  methods: {
+    clickPopup(id){
+      this.popupData.visible = true;
+      this.popupData.data = this.data[id-1];
     }
   }
 }
