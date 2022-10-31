@@ -1,12 +1,10 @@
 <template>
   <div>
     <header>
-      <section class="head p-32 grid lg:grid-cols-2 grid-cols-1 text-left">
-        <div>
-          <bun class="w-1/2 mx-auto" />
-        </div>
-        <div class="flex">
-          <div class="m-auto">
+      <section class="head p-16 text-left">
+        <div class="flex justify-center">
+          <bun class="w-56 mx-16" />
+          <div class="self-center">
             <h1 class="title">cinna<span>nom</span></h1>
             <h2>Discover the world of cinnamon buns in Oslo.</h2>
           </div>
@@ -31,16 +29,14 @@
     </svg>
 
     <section>
-      <popup v-if="popupData.visible">
-        <h1>Popup</h1>
-      </popup>
+      <popup v-if="popupData.visible" :data="popupData" @state="(state)=>{{popupData.visible = state}}" />
       <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
       <select v-model="selected" class="mb-16 styled" @change="sortData">
         <option value="rating">Sort by <span>rating</span></option>
         <option value="price">Sort by <span>price</span></option>
       </select>
       <div class="grid lg:grid-cols-2 grid-cols-1 md:gap-8 gap-16">
-        <card-small class="mx-auto" v-for="rating in sortedData" @click="this.clickPopup(1)"
+        <card-small class="mx-auto" v-for="rating in sortedData" @open="clickPopup"
                     :id="rating.id"
                     :bakery="rating.bakery"
                     :rating="rating.rating"
@@ -82,7 +78,11 @@ export default {
   methods: {
     clickPopup(id){
       this.popupData.visible = true;
-      this.popupData.data = this.data[id-1];
+      this.popupData.data = this.rawData.find((item, i)=>{
+        if(item.id === id){
+          return this.rawData[i]
+        }
+      });
     },
     sortData(){
       this.sortedData = this.rawData.sort((a, b) => {
@@ -179,7 +179,7 @@ export default {
   }
 
   .styled select{
-    background-image: url("~/static/divider.svg");
+    background-image: url('data:image/svg+xml;utf8,<!doctype html> <svg viewBox="0 0 292 98" width="292" height="98"> <path d="M 292 53.415 C 292 113.293 242.707 98.323 214.109 87.414 C 185.51 76.505 136.611 74.142 87.826 91.444 C 39.04 108.746 0 90.868 0 48.809 C 0 6.75 0 25.203 0 9.083 C 116.894 -21.432 138.958 37.294 292 6.78 L 292 53.415 Z" fill="#FFF3E8" transform="matrix(-1, 0, 0, -1, 292, 98.000042)"></path> </svg>');
     background-position: right 10px top 50%;
     background-repeat: no-repeat;
     background-size: 10px;

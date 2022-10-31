@@ -34,7 +34,7 @@
          <p>{{ sweetness }}</p>
        </div>
      </div>
-     <div class="cardBottom" >
+     <div class="cardBottom" @click="$emit('open', id)">
        <div class="absolute left-0 right-0 bottom-1/4">
          <p class="readMore inline-block pr-2">More details</p>
          <svg class="inline-block" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">

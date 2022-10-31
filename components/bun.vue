@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <svg class="w-fill" viewBox="0 0 211 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 211 229" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="MacBook Air - 4" clip-path="url(#clip0_0_1)">
         <rect width="1280" height="2679" transform="translate(-187 -68)" fill="#FFEAD7"/>
         <path id="Vector 1" d="M313.5 342C19.5 433.5 -93 355.667 -205.5 328.5L-217 -159H1155.5V202C1111.81 518.01 676.008 229.179 313.5 342Z" fill="#F8D5B6"/>
