@@ -21,7 +21,7 @@
       <h1 class="gradient padding"><span>Facts about the project</span></h1>
       <div class="grid md:grid-cols-3 grid-cols-1">
         <counter :min="80" :max="141" :description="'NOKs spent on buns throughout the project'" />
-        <counter :min="1" :max="data.length" :description="'cinnamon buns rated'" />
+        <counter :min="1" :max="rawData.length" :description="'cinnamon buns rated'" />
         <counter :min="2" :max="2" :description="'cinnanom-certified testers'" />
       </div>
     </section>
@@ -35,12 +35,12 @@
         <h1>Popup</h1>
       </popup>
       <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
-      <select v-model="selected" class="mb-16 styled">
+      <select v-model="selected" class="mb-16 styled" @change="sortData">
         <option value="rating">Sort by <span>rating</span></option>
         <option value="price">Sort by <span>price</span></option>
       </select>
       <div class="grid lg:grid-cols-2 grid-cols-1 md:gap-8 gap-16">
-        <card-small class="mx-auto" v-for="rating in data" @click="this.clickPopup(1)"
+        <card-small class="mx-auto" v-for="rating in sortedData" @click="this.clickPopup(1)"
                     :id="rating.id"
                     :bakery="rating.bakery"
                     :rating="rating.rating"
@@ -67,7 +67,8 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      data: ratingsData,
+      rawData: ratingsData,
+      sortedData: null,
       popupData: {
         data: null,
         visible: false
@@ -75,10 +76,26 @@ export default {
       selected: 'rating'
     }
   },
+  created() {
+    this.sortData();
+  },
   methods: {
     clickPopup(id){
       this.popupData.visible = true;
       this.popupData.data = this.data[id-1];
+    },
+    sortData(){
+      this.sortedData = this.rawData.sort((a, b) => {
+        if(this.selected === "rating"){
+          if (a.rating > b.rating) {
+            return -1;
+          }
+        }else{
+          if (a.price < b.price) {
+            return -1;
+          }
+        }
+      });
     }
   }
 }
