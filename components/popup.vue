@@ -11,13 +11,16 @@
         </div>
       </div>
       <div class="side-right grid grid-flow-row-dense">
-        <div class="side-right-top relative">
-          <div class="grid grid-cols-2 justify-around">
-            <div class="flex">
-              <h1 class="absolute text-2xl"><span class="rating">{{ data.data.rating }}</span> {{data.data.bakery}}</h1>
+        <div class="side-right-top">
+            <div class="text-left flex justify-center align-middle">
+              <div class="rating">{{ data.data.rating }}</div>
+              <div class="my-auto">
+                <h1 class="text-2xl "> {{data.data.bakery}} </h1>
+                <h2 class="text-lg" v-if="data.data['location_name']"> {{ data.data['location_name'] }}</h2>
+              </div>
             </div>
-          </div>
         </div>
+        <img class="w-full" src="~/static/dividerTop.svg" />
         <div class="side-right-content mx-auto">
           <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 justify-around">
             <data-row label="Smell" :value="data.data.smell" :has-line-below="true" />
@@ -45,6 +48,15 @@ export default {
 </script>
 
 <style scoped>
+
+  h1,h2{
+    @apply m-0 p-0;
+  }
+
+  h1{
+    font-weight: 600;
+  }
+
   .popup{
     position: fixed;
     top: 0;
@@ -86,11 +98,6 @@ export default {
 
   .side-right-top{
     background-color: var(--bg-dark);
-  }
-
-  .aaa:after{
-    content: url("~/static/dividerTop.svg");
-    @apply w-full absolute left-0 bottom-0;
   }
 
   .side-right-top img{

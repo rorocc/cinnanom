@@ -28,7 +28,7 @@
       <path d="M227 89.5768C72 89.5768 11.6667 37.2435 -18.5 2.57683L-27 89.5768C80.5 155.475 177.5 158.679 317 131.077C456.5 103.475 647 21.4746 895 42.9746C1143 64.4746 1332.5 131.077 1332.5 131.077L1339 64.4746C1250.5 49.9746 1182 22.9746 908 2.57686C634 -17.8209 382 89.5768 227 89.5768Z" fill="#FFF3E8"/>
     </svg>
 
-    <section>
+    <section id="buns">
       <popup v-if="popupData.visible" :data="popupData" @state="(state)=>{{popupData.visible = state}}" />
       <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
       <select v-model="selected" class="mb-16 styled" @change="sortData">

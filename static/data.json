@@ -1,6 +1,7 @@
 [{
   "id": 1,
   "bakery": "SiO Spiseri",
+  "location_name": "Ole-Johan Dahls hus",
   "geo_lat": 59.94342,
   "geo_long": 10.717823,
   "rating": 6.29,
@@ -17,8 +18,9 @@
   "comment": "v buttery, tasted kinda good but too greasy overall"
 },
   {
-  "id": 2,
-  "bakery": "W.B. Samson (Stortinget)",
+    "id": 2,
+    "bakery": "W.B. Samson",
+    "location_name": "Stortinget",
   "geo_lat": 59.9129,
   "geo_long": 10.741507,
   "rating": 8.71,
@@ -35,7 +37,8 @@
   "comment": "lovely optic, perfect amount of kanel + sugar, kanel in the dough, really juicy in the center"
 },{
   "id": 3,
-  "bakery": "United Bakeries (Nationaltheatret)",
+  "bakery": "United Bakeries",
+  "location_name": "Nationaltheatret",
   "geo_lat": 59.9151885,
   "geo_long": 10.7340975,
   "rating": 6.71,
@@ -52,7 +55,8 @@
   "comment": "wenig süß + zimtig, Kardamomnote, optisch top, etwas trockener"
 },{
   "id": 4,
-  "bakery": "Baker Hansen (Majorstuen)",
+  "bakery": "Baker Hansen",
+  "location_name": "Majorstuen",
   "geo_lat": 59.92953,
   "geo_long": 10.716522,
   "rating": 7.36,
