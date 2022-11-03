@@ -3,7 +3,7 @@
     <header>
       <section class="head p-16 text-left">
         <div class="flex justify-center">
-          <bun class="w-56 mx-16" />
+          <bun class="w-56 mx-16 logo" />
           <div class="self-center">
             <h1 class="title">cinna<span>nom</span></h1>
             <h2>Discover the world of cinnamon buns in Oslo.</h2>
@@ -28,7 +28,7 @@
       <path d="M227 89.5768C72 89.5768 11.6667 37.2435 -18.5 2.57683L-27 89.5768C80.5 155.475 177.5 158.679 317 131.077C456.5 103.475 647 21.4746 895 42.9746C1143 64.4746 1332.5 131.077 1332.5 131.077L1339 64.4746C1250.5 49.9746 1182 22.9746 908 2.57686C634 -17.8209 382 89.5768 227 89.5768Z" fill="#FFF3E8"/>
     </svg>
 
-    <section id="buns">
+    <section id="section-buns">
       <popup v-if="popupData.visible" :data="popupData" @state="(state)=>{{popupData.visible = state}}" />
       <h1 class="gradient padding"><span>Take a look at all the buns</span></h1>
       <select v-model="selected" class="mb-16 styled" @change="sortData">
@@ -36,7 +36,7 @@
         <option value="price">Sort by <span>price</span></option>
       </select>
       <div class="grid lg:grid-cols-2 grid-cols-1 md:gap-8 gap-16">
-        <card-small class="mx-auto" v-for="rating in sortedData" @open="clickPopup"
+        <card-small class="mx-auto bunCards opacity-0" v-for="rating in sortedData" @open="clickPopup"
                     :id="rating.id"
                     :bakery="rating.bakery"
                     :rating="rating.rating"
@@ -44,6 +44,22 @@
                     :sweetness="rating.sweetness" />
       </div>
     </section>
+
+    <svg class="w-full mt-32" viewBox="0 0 1280 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M227 89.5768C72 89.5768 11.6667 37.2435 -18.5 2.57683L-27 89.5768C80.5 155.475 177.5 158.679 317 131.077C456.5 103.475 647 21.4746 895 42.9746C1143 64.4746 1332.5 131.077 1332.5 131.077L1339 64.4746C1250.5 49.9746 1182 22.9746 908 2.57686C634 -17.8209 382 89.5768 227 89.5768Z" fill="#FFF3E8"/>
+    </svg>
+
+    <section id="how">
+      <h1 class="gradient padding"><span>How did we rate the cinnamon buns?</span></h1>
+      <div class="icon-criteria">
+        <criterium :heading="'Cinnamon level over 9000'" :description="'I am a wonderful description. Did you know that cinnamon is fantastic? Yes it is.'">
+          <unround-circle class="w-36 h-36">
+            <svg-cinnamon />
+          </unround-circle>
+        </criterium>
+      </div>
+    </section>
+
     <footer>
       <svg class="w-full" viewBox="0 0 1280 136" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M224 88.6263C69.0001 88.6263 30.1667 64.1667 6.10352e-05 29.5L0 136H1280V50.5C1232.67 37.1667 1128.2 15.2263 905 1.62628C647.906 -14.0389 379 88.6263 224 88.6263Z" fill="#FFF3E8"/>
@@ -59,8 +75,12 @@
 
 <script>
 import ratingsData from "../static/data.json"
+import SvgCinnamon from "@/components/svg/svgCinnamon";
+import UnroundCircle from "@/components/svg/unroundCircle";
+import Criterium from "@/components/svg/criterium";
 export default {
   name: 'IndexPage',
+  components: {Criterium, UnroundCircle, SvgCinnamon},
   data() {
     return {
       rawData: ratingsData,
@@ -75,7 +95,30 @@ export default {
   created() {
     this.sortData();
   },
+  mounted() {
+    this.boxRotation()
+    this.onScrollCards()
+  },
   methods: {
+    boxRotation() {
+      this.$gsap.to('.logo', { rotation: 90, x: 100, duration: 2 })
+    },
+    onScrollCards() {
+      this.$gsap.to(
+        '.bunCards',
+        {
+          scrollTrigger: {
+              trigger: '#section-buns',
+              start: 'top 60%',
+              end: 'top 5',
+              markers: true
+            },
+          opacity: 1,
+          duration: 1,
+          ease: "Power2.easeInOut"
+        }
+      )
+    },
     clickPopup(id){
       this.popupData.visible = true;
       this.popupData.data = this.rawData.find((item, i)=>{

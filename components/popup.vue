@@ -1,6 +1,6 @@
 <template>
   <div class="popup" @click="$emit('state', false)" >
-    <div class="popup-inner">
+    <div class="popup-inner pointer-events-none" @click="(e)=>{e.stopPropagation()}">
       <div class="side-left">
         <div class="side-img" v-bind:style="{backgroundImage: 'url(./img/buns/id_' + data.data.id + '.jpg)'}" />
         <div class="side-map" v-bind:style="{backgroundImage: 'url(\'https://www.netmaps.net/wp-content/uploads/2016/03/Oslo-Vector-Map.jpg\')'}" >
@@ -70,7 +70,8 @@ export default {
 
   .popup-inner{
     background-color: var(--bg-light);
-    @apply w-4/5 m-auto rounded-2xl overflow-hidden flex;
+    pointer-events: none;
+    @apply w-4/5 m-auto rounded-2xl overflow-hidden flex pointer-events-none;
   }
 
   .side-img, .side-map{

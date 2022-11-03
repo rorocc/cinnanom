@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.1",
+    "nuxt-gsap-module": "^1.7.2",
     "postcss": "^8.4.4"
   }
 }
