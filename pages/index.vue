@@ -1,7 +1,19 @@
 <template>
   <div>
-    <header>
+    <header class="overflow-clip">
       <section class="head p-16 text-left">
+        <div class="left-0 top-0 absolute pointer-events-none w-full h-full">
+          <div class="absolute w-full h-full floatingBunsBack z-0 opacity-75">
+            <small-bun class="w-16 absolute bottom-64 right-64" />
+            <small-bun class="w-16 absolute top-12 left-48" />
+            <small-bun class="w-16 absolute left-64 bottom-1/3" />
+          </div>
+          <div class="absolute top-0 w-full h-full floatingBunsFront z-0">
+            <small-bun class="w-32 absolute top-28 right-20" />
+            <small-bun class="w-24 absolute top-20 left-2/3" />
+            <small-bun class="w-28 absolute top-56 left-20" />
+          </div>
+        </div>
         <div class="flex justify-center">
           <bun class="w-56 mx-16 logo" />
           <div class="self-center">
@@ -11,11 +23,11 @@
         </div>
       </section>
     </header>
-    <svg class="w-full" viewBox="0 0 1280 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="w-full z-10" viewBox="0 0 1280 148" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M1306 0H-12L39.5 97.75L240 119L530.5 53.6562L831 10.625L1153.5 41.9688L1306 107.312V0Z" fill="#F8D5B6"/>
       <path d="M227 89.5768C72 89.5768 11.6667 37.2435 -18.5 2.57683L-27 89.5768C80.5 155.475 177.5 158.679 317 131.077C456.5 103.475 647 21.4746 895 42.9746C1143 64.4746 1332.5 131.077 1332.5 131.077L1339 64.4746C1250.5 49.9746 1182 22.9746 908 2.57686C634 -17.8209 382 89.5768 227 89.5768Z" fill="#FFF3E8"/>
     </svg>
-    <section>
+    <section id="section-facts">
       <h1 class="gradient padding"><span>Facts about the project</span></h1>
       <div class="grid md:grid-cols-3 grid-cols-1">
         <counter :min="80" :max="141" :description="'NOKs spent on buns throughout the project'" />
@@ -78,9 +90,10 @@ import ratingsData from "../static/data.json"
 import SvgCinnamon from "@/components/svg/svgCinnamon";
 import UnroundCircle from "@/components/svg/unroundCircle";
 import Criterium from "@/components/svg/criterium";
+import SmallBun from "@/components/svg/smallBun";
 export default {
   name: 'IndexPage',
-  components: {Criterium, UnroundCircle, SvgCinnamon},
+  components: {SmallBun, Criterium, UnroundCircle, SvgCinnamon},
   data() {
     return {
       rawData: ratingsData,
@@ -96,12 +109,33 @@ export default {
     this.sortData();
   },
   mounted() {
-    this.boxRotation()
     this.onScrollCards()
+    this.onScrollHeaderParallax()
   },
   methods: {
-    boxRotation() {
-      this.$gsap.to('.logo', { rotation: 90, x: 100, duration: 2 })
+    onScrollHeaderParallax(){
+      this.$gsap.to(".floatingBunsBack", {
+        yPercent: -45,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#section-facts",
+          // start: "top bottom", // the default values
+          // end: "bottom top",
+          scrub: true
+        },
+      });
+
+      this.$gsap.to(".floatingBunsFront", {
+        yPercent: -80,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#section-facts",
+          // start: "top bottom", // the default values
+          // end: "bottom top",
+          scrub: true
+        },
+      });
+
     },
     onScrollCards() {
       this.$gsap.to(
@@ -111,7 +145,7 @@ export default {
               trigger: '#section-buns',
               start: 'top 60%',
               end: 'top 5',
-              markers: true
+              markers: false
             },
           opacity: 1,
           duration: 1,

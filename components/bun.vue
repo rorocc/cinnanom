@@ -1,8 +1,7 @@
 <template>
   <div>
-    <svg width="240" height="297" viewBox="0 0 240 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 240 297" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="MacBook Air - 4" clip-path="url(#clip0_0_1)">
-        <rect width="1280" height="2679" transform="translate(-166 -62)" fill="#FFEAD7"/>
         <path id="Vector 1" d="M334.5 348C40.5 439.5 -72 361.667 -184.5 334.5L-196 -153H1176.5V208C1132.81 524.01 697.008 235.179 334.5 348Z" fill="#F8D5B6"/>
         <path id="Vector 2" d="M61 386.577C-94 386.577 -154.333 334.243 -184.5 299.577L-193 386.577C-85.5 452.475 11.5 455.679 151 428.077C290.5 400.475 481 318.475 729 339.975C977 361.475 1166.5 428.077 1166.5 428.077L1173 361.475C1084.5 346.975 1016 319.975 742 299.577C468 279.179 216 386.577 61 386.577Z" fill="#FFF3E8"/>
         <g id="ugly bun">
@@ -52,9 +51,6 @@
           <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
           <feGaussianBlur stdDeviation="9.5" result="effect1_foregroundBlur_0_1"/>
         </filter>
-        <clipPath id="clip0_0_1">
-          <rect width="1280" height="2679" fill="white" transform="translate(-166 -62)"/>
-        </clipPath>
       </defs>
     </svg>
 
