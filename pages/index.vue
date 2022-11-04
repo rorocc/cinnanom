@@ -3,10 +3,10 @@
     <header class="overflow-clip">
       <section class="head p-16 text-left">
         <div class="left-0 top-0 absolute pointer-events-none w-full h-full">
-          <div class="absolute w-full h-full floatingBunsBack z-0 opacity-75">
-            <small-bun class="w-16 absolute bottom-64 right-64" />
-            <small-bun class="w-16 absolute top-12 left-48" />
-            <small-bun class="w-16 absolute left-64 bottom-1/3" />
+          <div class="absolute w-full h-full floatingBunsBack z-0">
+            <small-bun brightness="95" class="w-16 absolute bottom-64 right-64 rotate-90" />
+            <small-bun brightness="95" class="w-16 absolute top-12 left-48" />
+            <small-bun brightness="95" class="w-16 absolute left-64 bottom-1/3" />
           </div>
           <div class="absolute top-0 w-full h-full floatingBunsFront z-0">
             <small-bun class="w-32 absolute top-28 right-20" />
@@ -115,7 +115,7 @@ export default {
   methods: {
     onScrollHeaderParallax(){
       this.$gsap.to(".floatingBunsBack", {
-        yPercent: -45,
+        yPercent: -25,
         ease: "none",
         scrollTrigger: {
           trigger: "#section-facts",
