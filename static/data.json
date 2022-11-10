@@ -71,4 +71,22 @@
   "price": 31,
   "date": "2022-10-25",
   "comment": "looks good, kardamom, good level of sugar + kanel but could be more, cheap! 37 for eating in"
+},{
+  "id": 5,
+  "bakery": "Bergensbanen",
+  "location_name": "Oslo - Bergen",
+  "geo_lat": 59.910789,
+  "geo_long": 10.756062,
+  "rating": 6.93,
+  "smell": 7,
+  "aesthetic": 5,
+  "juiciness": 6.5,
+  "fluffiness": 8,
+  "cinnamon": 7,
+  "cardamom": false,
+  "sweetness": 8,
+  "taste": 7,
+  "price": 34,
+  "date": "2022-11-08",
+  "comment": "warm, heated up"
 }]

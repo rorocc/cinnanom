@@ -30,7 +30,7 @@
     <section id="section-facts">
       <h1 class="gradient padding"><span>Facts about the project</span></h1>
       <div class="grid md:grid-cols-3 grid-cols-1">
-        <counter :min="80" :max="141" :description="'NOKs spent on buns throughout the project'" />
+        <counter :min="80" :max="175" :description="'NOKs spent on buns throughout the project'" />
         <counter :min="1" :max="rawData.length" :description="'cinnamon buns rated'" />
         <counter :min="2" :max="2" :description="'cinnanom-certified testers'" />
       </div>
