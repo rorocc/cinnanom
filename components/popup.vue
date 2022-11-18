@@ -10,7 +10,7 @@
           </l-map>
         </div>
       </div>
-      <div class="side-right grid grid-flow-row-dense">
+      <div class="side-right">
         <div class="side-right-top">
             <div class="text-left flex justify-center align-middle">
               <div class="rating">{{ data.data.rating.toFixed(1) }}</div>
@@ -22,7 +22,10 @@
         </div>
         <img class="w-full" src="~/static/dividerTop.svg" />
         <div class="side-right-content mx-auto">
-          <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 justify-around">
+          <div class="description mb-4 leading-loose max-w-prose">
+            {{ data.data.comment }}
+          </div>
+          <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-around">
             <data-row label="Smell" :value="data.data.smell" :has-line-below="true" />
             <data-row label="Aesthetic" :value="data.data.aesthetic" :has-line-below="true" />
             <data-row label="Juciness" :value="data.data.juiciness" :has-line-below="true" />
@@ -83,7 +86,7 @@ export default {
   }
 
   .side-right-content{
-    @apply p-8;
+    @apply px-8 py-4 my-auto text-left;
   }
 
   .side-right{

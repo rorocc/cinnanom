@@ -29,10 +29,10 @@
     </svg>
     <section id="section-facts">
       <h1 class="gradient padding"><span>Facts about the project</span></h1>
-      <div class="grid md:grid-cols-3 grid-cols-1">
-        <counter :min="170" :max="250" :description="'NOKs spent on buns throughout the project'" />
-        <counter :min="1" :max="rawData.length" :description="'cinnamon buns rated'" />
-        <counter :min="2" :max="3" :description="'cinnanom-certified testers'" />
+      <div class="grid md:grid-cols-3 grid-cols-1 counters">
+        <counter class="counterEven" :min="170" :max="250" :description="'NOKs spent on buns throughout the project'" />
+        <counter class="counterOdd" :min="1" :max="rawData.length" :description="'cinnamon buns rated'" />
+        <counter class="counterEven" :min="2" :max="3" :description="'cinnanom-certified testers'" />
       </div>
     </section>
 
@@ -111,8 +111,33 @@ export default {
   mounted() {
     this.onScrollCards()
     this.onScrollHeaderParallax()
+    this.onScrollCounters()
   },
   methods: {
+    onScrollCounters(){
+      this.$gsap.to(".counterEven", {
+        yPercent: -30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#section-facts",
+          // start: "top bottom", // the default values
+          // end: "bottom top",
+          scrub: true
+        },
+      });
+
+      this.$gsap.to(".counterOdd", {
+        yPercent: -50,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#section-facts",
+           //start: "bottom top", // the default values
+          //end: "bottom center",
+          scrub: true
+        },
+      });
+
+    },
     onScrollHeaderParallax(){
       this.$gsap.to(".floatingBunsBack", {
         yPercent: -25,
@@ -188,6 +213,10 @@ export default {
     --bg-light: #FFEAD7;
     --bg-lightest: #FFF3E8;
     --bg-dark: #F8D5B6;
+  }
+
+  .counters{
+    transform: translateY(30%)
   }
 
   * p{
