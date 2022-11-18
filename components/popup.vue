@@ -1,5 +1,5 @@
 <template>
-  <div class="popup" @click="$emit('state', false)" >
+  <div class="popup flex" @click="$emit('state', false)" >
     <div class="popup-inner pointer-events-none" @click="(e)=>{e.stopPropagation()}">
       <div class="side-left">
         <div class="side-img" v-bind:style="{backgroundImage: 'url(./img/buns/id_' + data.data.id + '.jpg)'}" />

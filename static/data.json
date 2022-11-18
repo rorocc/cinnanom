@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "bakery": "SiO Spiseri IFI",
+    "bakery": "SiO Spiseri",
     "location_name": "Ole-Johan Dahls hus",
     "rating": 6.25,
     "smell": 5,
@@ -19,7 +19,7 @@
   },
   {
     "id": 2,
-    "bakery": "WB Samson Stortinget",
+    "bakery": "W.B. Samson",
     "location_name": "Stortinget",
     "rating": 8.8125,
     "smell": 8,
@@ -37,7 +37,7 @@
   },
   {
     "id": 3,
-    "bakery": "United Bakeries Nationaltheatret",
+    "bakery": "United Bakeries",
     "location_name": "Nationalthetret",
     "rating": 6.625,
     "smell": 6,
@@ -55,7 +55,7 @@
   },
   {
     "id": 4,
-    "bakery": "Baker Hansen Majorstuen",
+    "bakery": "Baker Hansen",
     "location_name": "Majorstuen",
     "rating": 7.375,
     "smell": 6.5,

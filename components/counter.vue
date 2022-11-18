@@ -23,7 +23,7 @@ export default {
 <style scoped>
 
   .counterContainer{
-    background-image: url("/unroundCircle.svg");
+    background-image: url("~/static/unroundCircle.svg");
     background-repeat: no-repeat;
     background-position: center;
     @apply p-12;
