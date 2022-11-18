@@ -1,6 +1,6 @@
 <template>
  <div class="card flex md:flex-nowrap flex-wrap">
-   <div class="cardImg flex-none" v-bind:style="{backgroundImage: 'url(./img/buns/id_' + id + '.jpg)'}">
+   <div class="cardImg flex-none cursor-pointer" @click="$emit('open', id)" v-bind:style="{backgroundImage: 'url(./img/buns/id_' + id + '.jpg)'}">
      <div class="tag">{{ rating.toFixed(1) }}</div>
    </div>
    <div class="w-full relative px-8 pt-6 justify-between ">

@@ -11,8 +11,8 @@
         </div>
       </div>
       <div class="side-right">
-        <div class="side-right-top">
-            <div class="text-left flex justify-center align-middle">
+        <div class="side-right-top flex">
+            <div class="text-left justify-center inline-flex mt-4 ml-4">
               <div class="rating">{{ data.data.rating.toFixed(1) }}</div>
               <div class="my-auto">
                 <h1 class="text-2xl "> {{data.data.bakery}} </h1>
