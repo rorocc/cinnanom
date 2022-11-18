@@ -30,9 +30,9 @@
     <section id="section-facts">
       <h1 class="gradient padding"><span>Facts about the project</span></h1>
       <div class="grid md:grid-cols-3 grid-cols-1">
-        <counter :min="80" :max="175" :description="'NOKs spent on buns throughout the project'" />
+        <counter :min="170" :max="250" :description="'NOKs spent on buns throughout the project'" />
         <counter :min="1" :max="rawData.length" :description="'cinnamon buns rated'" />
-        <counter :min="2" :max="2" :description="'cinnanom-certified testers'" />
+        <counter :min="2" :max="3" :description="'cinnanom-certified testers'" />
       </div>
     </section>
 
@@ -52,7 +52,7 @@
                     :id="rating.id"
                     :bakery="rating.bakery"
                     :rating="rating.rating"
-                    :price="rating.price"
+                    :price="rating.priceNok"
                     :sweetness="rating.sweetness" />
       </div>
     </section>
@@ -168,7 +168,7 @@ export default {
             return -1;
           }
         }else{
-          if (a.price < b.price) {
+          if (a.priceNok < b.priceNok) {
             return -1;
           }
         }

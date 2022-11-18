@@ -13,7 +13,7 @@
       <div class="side-right grid grid-flow-row-dense">
         <div class="side-right-top">
             <div class="text-left flex justify-center align-middle">
-              <div class="rating">{{ data.data.rating }}</div>
+              <div class="rating">{{ data.data.rating.toFixed(1) }}</div>
               <div class="my-auto">
                 <h1 class="text-2xl "> {{data.data.bakery}} </h1>
                 <h2 class="text-lg" v-if="data.data['location_name']"> {{ data.data['location_name'] }}</h2>
@@ -30,7 +30,7 @@
             <data-row label="Cinnamon level" :value="data.data.cinnamon" :has-line-below="true" />
             <data-row label="Sweetness" :value="data.data.sweetness" :has-line-below="true" />
             <data-row label="Taste" :value="data.data.taste" :has-line-below="true" />
-            <data-row label="Price" :value="data.data.price + ' NOK'" :has-line-below="true" />
+            <data-row label="Price" :value="data.data.priceNok + ' NOK'" :has-line-below="true" />
           </div>
         </div>
       </div>

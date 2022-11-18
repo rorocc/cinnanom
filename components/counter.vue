@@ -1,14 +1,11 @@
 <template>
-  <div class="relative content-center">
+  <div class="relative content-center counterContainer">
     <div class="relative z-10">
       <div class="counter" />
       <div class="description">
         <p> {{ description }} </p>
       </div>
     </div>
-    <svg class="absolute w-48" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M393.828 161.114C412.134 240.945 390.859 270.611 314.667 348.292C238.474 425.973 178.768 402.839 98.457 365.006C44.5283 339.601 0 260.806 0 205.406C0 154.159 10.5515 106.696 45.3512 71.0963C80.1509 35.4962 166.734 -20.1226 254.801 7.38637C342.868 34.8954 375.522 81.2834 393.828 161.114Z" fill="#FFF3E8"/>
-    </svg>
   </div>
 </template>
 
@@ -24,6 +21,13 @@ export default {
 </script>
 
 <style scoped>
+
+  .counterContainer{
+    background-image: url("/unroundCircle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    @apply p-12;
+  }
 
   .description{
     color: var(--primary-color-light);

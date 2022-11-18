@@ -1,7 +1,7 @@
 <template>
  <div class="card flex md:flex-nowrap flex-wrap">
    <div class="cardImg flex-none" v-bind:style="{backgroundImage: 'url(./img/buns/id_' + id + '.jpg)'}">
-     <div class="tag">{{ rating }}</div>
+     <div class="tag">{{ rating.toFixed(1) }}</div>
    </div>
    <div class="w-full relative px-8 pt-6 justify-between ">
      <div class="data-block grid grid-cols-2 uppercase tracking-wider">
