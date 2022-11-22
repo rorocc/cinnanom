@@ -12,10 +12,11 @@
     "sweetness": 8,
     "taste": 6,
     "priceNok": 15,
+    "cardamon": false,
     "date": "10/24/2022",
-    "comment": "v buttery, tasted kinda good but too greasy overall",
     "geo_lat": 59.94342,
-    "geo_long": 10.717823
+    "geo_long": 10.717823,
+    "comment": "Uh, what a greasy affair! This little bun was a sweet and tasty little thing, but there was liquid butter everywhere!"
   },
   {
     "id": 2,
@@ -30,10 +31,11 @@
     "sweetness": 9.5,
     "taste": 9,
     "priceNok": 46,
+    "cardamon": false,
     "date": "10/25/2022",
-    "comment": "You're actually looking at the best cinnamon bun in Oslo tested for cinnanom! The bun has a lovely optic, the perfect amount of cinnamon worked into the dough with a nice level of sweetness. Also, it has a juicy core in the center. With the price of 46 NOK definitely one of the more expensive ones, but it's worth it!",
     "geo_lat": 59.9129,
-    "geo_long": 10.741507
+    "geo_long": 10.741507,
+    "comment": "You're actually looking at the best cinnamon bun in Oslo tested for cinnanom! The bun has a lovely optic, the perfect amount of cinnamon worked into the dough with a nice level of sweetness. Also, it has a juicy core in the center. With the price of 46 NOK definitely one of the more expensive ones, but it's worth it!"
   },
   {
     "id": 3,
@@ -48,10 +50,11 @@
     "sweetness": 6,
     "taste": 6,
     "priceNok": 49,
+    "cardamon": true,
     "date": "10/25/2022",
-    "comment": "not very cinnanom-y + sweet, cardamom, v aesthetic, a little dry",
     "geo_lat": 59.9151885,
-    "geo_long": 10.7340975
+    "geo_long": 10.7340975,
+    "comment": "Could be the winner of Norway’s next cinnamon bun model, but it does not convince for it’s level of cinnamon taste. Not very sweet, but a very noticable note of cardamom."
   },
   {
     "id": 4,
@@ -66,10 +69,11 @@
     "sweetness": 8,
     "taste": 7.5,
     "priceNok": 31,
+    "cardamon": true,
     "date": "10/26/2022",
-    "comment": "looks good, kardamom, good level of sugar + kanel but could be more, cheap! 37 for eating in",
     "geo_lat": 59.92953,
-    "geo_long": 10.716522
+    "geo_long": 10.716522,
+    "comment": "What a cutie. Convinces with a good level of sweetness, but there could be more cinnamon for our taste. How could you not give it a shot for that price?"
   },
   {
     "id": 5,
@@ -84,28 +88,30 @@
     "sweetness": 8,
     "taste": 7,
     "priceNok": 34,
+    "cardamon": false,
     "date": "11/08/2022",
-    "comment": "warm",
     "geo_lat": 59.910789,
-    "geo_long": 10.756062
+    "geo_long": 10.756062,
+    "comment": "If you ever decide to travel with the famous Bergensbanen between Oslo and Bergen, you’ll most certainly stumble over this cinnamon bun in the train’s cafe! It’s a good bun - eating it while the beautiful landscape passes by on the outside makes it a very unique experience."
   },
   {
     "id": 6,
     "bakery": "Narvesen",
     "location_name": "Majorstuen",
-    "rating": 6.5,
+    "rating": 6.625,
     "smell": 6.5,
     "aesthetic": 7,
     "juiciness": 7,
     "fluffiness": 6,
     "cinnamony": 6.5,
-    "sweetness": 5,
+    "sweetness": 6,
     "taste": 7,
     "priceNok": 31,
+    "cardamon": false,
     "date": "11/18/2022",
-    "comment": "tastes a lot like dough, no cardamom, dry on the outside, low level of cinnamon + sweetness, “feels like chewing on raw dough with cinnamon",
     "geo_lat": 59.92948,
-    "geo_long": 10.715905
+    "geo_long": 10.715905,
+    "comment": "For that price, it is a fine cinnamon bun. While it is very dough-y on the inside, it is a bit dryer on the outside. I’m quoting the second tester for this bun: “It feels like chewing on raw dough with cinnamon” - wow, he must have had a sleepless night or something. Also, sweet tongues need to be strong: it has a weak taste of cinnamon and isn’t that sweet either."
   },
   {
     "id": 7,
@@ -120,9 +126,10 @@
     "sweetness": 5,
     "taste": 4,
     "priceNok": 44,
+    "cardamon": true,
     "date": "11/18/2022",
-    "comment": "intense cardamom, almost no cinnamon taste",
     "geo_lat": 59.93006,
-    "geo_long": 10.715737
+    "geo_long": 10.715737,
+    "comment": "Definitely a 10/10 if we’d be looking for cardamom buns. This pastry has almost no cinnamon taste and isn’t on the sweet side either. Looks nice, though!"
   }
 ]

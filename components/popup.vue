@@ -25,12 +25,12 @@
           <div class="description mb-4 leading-loose max-w-prose">
             {{ data.data.comment }}
           </div>
-          <div class="grid lg:grid-cols-2 grid-cols-1 gap-4 justify-around">
+          <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 justify-around">
             <data-row label="Smell" :value="data.data.smell" :has-line-below="true" />
             <data-row label="Aesthetic" :value="data.data.aesthetic" :has-line-below="true" />
             <data-row label="Juciness" :value="data.data.juiciness" :has-line-below="true" />
             <data-row label="Fluffiness" :value="data.data.fluffiness" :has-line-below="true" />
-            <data-row label="Cinnamon level" :value="data.data.cinnamon" :has-line-below="true" />
+            <data-row label="Cinnamon level" :value="data.data.cinnamony" :has-line-below="true" />
             <data-row label="Sweetness" :value="data.data.sweetness" :has-line-below="true" />
             <data-row label="Taste" :value="data.data.taste" :has-line-below="true" />
             <data-row label="Price" :value="data.data.priceNok + ' NOK'" :has-line-below="true" />
