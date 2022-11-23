@@ -75,6 +75,8 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./dist
+      - name: Create CNAME
+        run: echo cinnanom.ga > CNAME
 
   # Deployment job
   deploy:
