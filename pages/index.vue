@@ -32,7 +32,7 @@
       <div class="grid md:grid-cols-3 grid-cols-1 counters">
         <counter class="counterEven" :min="170" :max="250" :description="'NOKs spent on buns throughout the project'" />
         <counter class="counterOdd" :min="1" :max="rawData.length" :description="'cinnamon buns rated'" />
-        <counter class="counterEven" :min="2" :max="3" :description="'cinnanom-certified testers'" />
+        <counter class="counterEven" :min="3" :max="7" :description="'avg. rating'" />
       </div>
     </section>
 
