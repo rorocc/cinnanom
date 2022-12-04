@@ -1,7 +1,9 @@
 <template>
-  <div class="flex text-left w-prose justify-center">
-    <slot />
-    <div class="items-center justify-center my-auto ml-8">
+  <div class="md:flex gap-0 grid grid-rows-2 md:text-left text-center w-prose justify-center">
+    <div class="mx-auto self-center items-center">
+      <slot />
+    </div>
+    <div class="items-center justify-center my-auto">
       <h1 class="text-xl m-0 p-0">{{ heading }}</h1>
       <p>{{ description }}</p>
     </div>

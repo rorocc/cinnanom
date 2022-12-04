@@ -121,8 +121,8 @@ export default {
 
   @media only screen and (max-width: 768px) {
     .card{
-      height: 532px;
-      @apply w-2/3;
+      height: 396px;
+      @apply w-4/5;
     }
 
     .cardImg{

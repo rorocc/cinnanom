@@ -2,7 +2,7 @@
   <div>
     <header class="overflow-clip">
       <section class="head p-16 text-left">
-        <div class="left-0 top-0 absolute pointer-events-none w-full h-full">
+        <div class="left-0 top-0 absolute pointer-events-none w-full h-full hidden md:block">
           <div class="absolute w-full h-full floatingBunsBack z-0">
             <small-bun brightness="95" class="w-16 absolute bottom-64 right-64 rotate-90" />
             <small-bun brightness="95" class="w-16 absolute top-12 left-48" />
@@ -14,9 +14,9 @@
             <small-bun class="w-28 absolute top-56 left-20" />
           </div>
         </div>
-        <div class="flex justify-center">
+        <div class="grid md:grid-flow-col-dense grid-flow-row-dense justify-center">
           <bun class="w-56 mx-16 logo" />
-          <div class="self-center">
+          <div class="self-center text-center">
             <h1 class="title">cinna<span>nom</span></h1>
             <h2>Discover the world of cinnamon buns in Oslo.</h2>
           </div>
@@ -64,7 +64,7 @@
     <section id="how">
       <h1 class="gradient padding"><span>How did we rate the cinnamon buns?</span></h1>
       <div class="icon-criteria">
-        <criterium :heading="'Cinnamon level over 9000'" :description="'I am a wonderful description. Did you know that cinnamon is fantastic? Yes it is.'">
+        <criterium :heading="'Placeholder cinnamon'" :description="'I am a wonderful placeholder description. Did you know that cinnamon is fantastic and yummy? Yes it is.'">
           <unround-circle class="w-36 h-36">
             <svg-cinnamon />
           </unround-circle>
@@ -110,8 +110,10 @@ export default {
   },
   mounted() {
     this.onScrollCards()
-    this.onScrollHeaderParallax()
-    this.onScrollCounters()
+    if(window.innerWidth > 600){
+      this.onScrollHeaderParallax()
+      this.onScrollCounters()
+    }
   },
   methods: {
     onScrollCounters(){
@@ -219,6 +221,13 @@ export default {
     transform: translateY(30%)
   }
 
+  @media only screen and (max-width: 768px) {
+    .counters{
+      transform: translateY(0%);
+      @apply gap-12;
+    }
+  }
+
   * p{
     font-family: 'Inter', sans-serif;
   }
@@ -238,7 +247,7 @@ export default {
   }
 
   h1.title{
-    @apply lg:text-8xl text-6xl p-0 py-6;
+    @apply lg:text-8xl text-7xl p-0 py-6;
   }
 
   h1.title span{
@@ -248,7 +257,7 @@ export default {
   h2{
     font-family: 'Playfair Display', serif;
     color: var(--primary-color-dark);
-    @apply tracking-wide lg:text-xl text-lg;
+    @apply tracking-wide lg:text-2xl text-xl;
   }
 
   h1.gradient span{
