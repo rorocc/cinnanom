@@ -40,7 +40,7 @@
   {
     "id": 3,
     "bakery": "United Bakeries",
-    "location_name": "Nationalthetret",
+    "location_name": "Nationaltheater",
     "rating": 6.625,
     "smell": 6,
     "aesthetic": 9,
@@ -78,7 +78,7 @@
   {
     "id": 5,
     "bakery": "Bergensbanen",
-    "location_name": "Oslo - Bergen",
+    "location_name": "Oslo - Bergen - Oslo",
     "rating": 6.9375,
     "smell": 7,
     "aesthetic": 5,
@@ -131,5 +131,43 @@
     "geo_lat": 59.93006,
     "geo_long": 10.715737,
     "comment": "Definitely a 10/10 if we’d be looking for cardamom buns. This pastry has almost no cinnamon taste and isn’t on the sweet side either. Looks nice, though!"
+  },
+  {
+    "id": 8,
+    "bakery": "Espresso House",
+    "location_name": "Ullevål Stadion",
+    "rating": 7.5,
+    "smell": 6.5,
+    "aesthetic": 7,
+    "juiciness": 8.5,
+    "fluffiness": 7,
+    "cinnamony": 9,
+    "sweetness": 8,
+    "taste": 7,
+    "priceNok": 39,
+    "cardamon": true,
+    "date": "12/14/2022",
+    "geo_lat": 59.9499965,
+    "geo_long": 10.7341518,
+    "comment": "nice n cinnanomy, good sweetness, but cardamom comes through sometimes, hail sugar for the extra crunch, not a slight touch of dryness"
+  },
+  {
+    "id": 9,
+    "bakery": "Kiwi",
+    "location_name": "Ullevål Stadion",
+    "rating": 0,
+    "smell": 0,
+    "aesthetic": 0,
+    "juiciness": 0,
+    "fluffiness": 0,
+    "cinnamony": 0,
+    "sweetness": 0,
+    "taste": 0,
+    "priceNok": 22,
+    "cardamon": false,
+    "date": "12/15/2022",
+    "geo_lat": 59.9478675,
+    "geo_long": 10.7315208,
+    "comment": "tbd"
   }
 ]
