@@ -2,7 +2,7 @@
   <div class="popup flex" @click="$emit('state', false)" >
     <div class="popup-inner overflow-y-scroll">
       <div class="side-left">
-        <div class="side-img" v-bind:style="{backgroundImage: 'url(./img/buns/id_' + data.data.id + '.jpg)'}" />
+        <div class="side-img" v-bind:style="getOptimizedImage(data.data.id)" />
         <div class="side-map" v-bind:style="{backgroundImage: 'url(\'https://www.netmaps.net/wp-content/uploads/2016/03/Oslo-Vector-Map.jpg\')'}" >
           <l-map :zoom=13 :center="[data.data.geo_lat,data.data.geo_long]">
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
@@ -55,6 +55,14 @@ export default {
   name: "popup",
   props: {
     data: Object
+  },
+  methods: {
+    getOptimizedImage(id) {
+      const imgUrl = this.$img('./img/buns/id_' + id + '.jpg')
+      return {
+        backgroundImage: `url('${imgUrl}')`
+      }
+    }
   }
 }
 </script>
