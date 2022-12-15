@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     getOptimizedImage(id) {
-      const imgUrl = this.$img('./img/buns/id_' + id + '.jpg')
+      const imgUrl = this.$img('./img/buns/id_' + id + '.jpg', {}, {provider:"static"})
       return {
         backgroundImage: `url('${imgUrl}')`
       }
