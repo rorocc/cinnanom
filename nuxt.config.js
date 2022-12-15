@@ -34,8 +34,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    'nuxt-gsap-module',
-    '@nuxt/image'
+    'nuxt-gsap-module'
   ],
 
   gsap: {

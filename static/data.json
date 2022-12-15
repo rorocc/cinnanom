@@ -136,9 +136,9 @@
     "id": 8,
     "bakery": "Espresso House",
     "location_name": "Ullevål Stadion",
-    "rating": 7.5,
+    "rating": 7.68,
     "smell": 6.5,
-    "aesthetic": 7,
+    "aesthetic": 7.5,
     "juiciness": 8.5,
     "fluffiness": 7,
     "cinnamony": 9,
@@ -149,25 +149,25 @@
     "date": "12/14/2022",
     "geo_lat": 59.9499965,
     "geo_long": 10.7341518,
-    "comment": "nice n cinnanomy, good sweetness, but cardamom comes through sometimes, hail sugar for the extra crunch, not a slight touch of dryness"
+    "comment": "Uhhhh, a juicy one! Lovely and nice n cinnanom-y, good sweetness, with sometimes a taste of cardamom coming through. Somehow, they manage to keep it fluffy but yet juicy. Can recommend."
   },
   {
     "id": 9,
     "bakery": "Kiwi",
     "location_name": "Ullevål Stadion",
-    "rating": 0,
-    "smell": 0,
-    "aesthetic": 0,
-    "juiciness": 0,
-    "fluffiness": 0,
-    "cinnamony": 0,
-    "sweetness": 0,
-    "taste": 0,
+    "rating": 6.75,
+    "smell": 7,
+    "aesthetic": 7,
+    "juiciness": 6.5,
+    "fluffiness": 6.5,
+    "cinnamony": 6,
+    "sweetness": 8,
+    "taste": 6.5,
     "priceNok": 22,
-    "cardamon": false,
+    "cardamon": true,
     "date": "12/15/2022",
     "geo_lat": 59.9478675,
     "geo_long": 10.7315208,
-    "comment": "tbd"
+    "comment": "Is it cardamom, is it lemon? I don’t know but this bun is definitely a little snack for in between. It has a nice size, crunchy hail sugar and is easy to get at the Kiwi supermarkets. "
   }
 ]
