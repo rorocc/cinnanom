@@ -53,7 +53,7 @@
                     :bakery="rating.bakery"
                     :rating="rating.rating"
                     :price="rating.priceNok"
-                    :sweetness="rating.sweetness" />
+                    :taste="rating.taste" />
       </div>
     </section>
 
@@ -63,13 +63,7 @@
 
     <section id="how">
       <h1 class="gradient padding"><span>How did we rate the cinnamon buns?</span></h1>
-      <div class="icon-criteria">
-        <criterium :heading="'Placeholder cinnamon'" :description="'I am a wonderful placeholder description. Did you know that cinnamon is fantastic and yummy? Yes it is.'">
-          <unround-circle class="w-36 h-36">
-            <svg-cinnamon />
-          </unround-circle>
-        </criterium>
-      </div>
+      <howbun class="lg:w-5/6 w-full m-auto" />
     </section>
 
     <footer>
@@ -77,8 +71,8 @@
         <path d="M224 88.6263C69.0001 88.6263 30.1667 64.1667 6.10352e-05 29.5L0 136H1280V50.5C1232.67 37.1667 1128.2 15.2263 905 1.62628C647.906 -14.0389 379 88.6263 224 88.6263Z" fill="#FFF3E8"/>
       </svg>
       <div class="w-full p-16">
-        <div class="max-w-prose leading-loose">
-          This is a private project completely made for fun without any commerical intentions. <br /> The ratings were done by a few private subjects without commerical interests or influence.
+        <div class="max-w-prose leading-loose text-sm">
+          This is a private project made for fun without any commerical intentions. The ratings were done by a few private subjects without commerical interests or influence. No guarantee for the correctness of the values, including price, location or store names, for example.
         </div>
       </div>
     </footer>
@@ -91,9 +85,10 @@ import SvgCinnamon from "@/components/svg/svgCinnamon";
 import UnroundCircle from "@/components/svg/unroundCircle";
 import Criterium from "@/components/svg/criterium";
 import SmallBun from "@/components/svg/smallBun";
+import Howbun from "@/components/svg/howbun";
 export default {
   name: 'IndexPage',
-  components: {SmallBun, Criterium, UnroundCircle, SvgCinnamon},
+  components: {Howbun, SmallBun, Criterium, UnroundCircle, SvgCinnamon},
   data() {
     return {
       rawData: ratingsData,
@@ -189,8 +184,9 @@ export default {
               markers: false
             },
           opacity: 1,
-          duration: 1,
-          ease: "Power2.easeInOut"
+          duration: 0.55,
+          stagger: 0.2,
+          ease: "none"
         }
       )
     },

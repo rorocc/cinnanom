@@ -28,10 +28,10 @@
 
      <div class="data-block grid grid-cols-2 uppercase tracking-wider">
        <div class="attribute">
-         <p>Sweetness</p>
+         <p>Taste</p>
        </div>
        <div class="data">
-         <p>{{ sweetness }}</p>
+         <p>{{ taste }} / 10</p>
        </div>
      </div>
      <div class="cardBottom" @click="$emit('open', id)">
@@ -55,7 +55,7 @@ export default {
     bakery: String,
     rating: Number,
     price: Number,
-    sweetness: Number
+    taste: Number
   },
   methods: {
     getOptimizedImage(id) {
