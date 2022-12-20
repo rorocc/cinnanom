@@ -30,9 +30,9 @@
     <section id="section-facts">
       <h1 class="gradient padding"><span>Facts about the project</span></h1>
       <div class="grid md:grid-cols-3 grid-cols-1 counters">
-        <counter class="counterEven" :min="170" :max="311" :description="'NOKs spent on buns throughout the project'" />
+        <counter class="counterEven" :min="170" :max="calculateNOKSpent()" :description="'NOKs spent on buns throughout the project'" />
         <counter class="counterOdd" :min="1" :max="rawData.length" :description="'cinnamon buns rated'" />
-        <counter class="counterEven" :min="3" :max="7" :description="'avg. rating'" />
+        <counter class="counterEven" :min="4" :max="calculateAvgRating()" :description="'Average rating'" />
       </div>
     </section>
 
@@ -116,6 +116,20 @@ export default {
     }
   },
   methods: {
+    calculateNOKSpent(){
+      let sum = 0;
+      ratingsData.forEach( obj => {
+        sum += obj.priceNok;
+      })
+      return sum;
+    },
+    calculateAvgRating(){
+      let sum = 0;
+      ratingsData.forEach( obj => {
+        sum += obj.rating;
+      })
+      return (sum / ratingsData.length).toFixed(1);
+    },
     onScrollCounters(){
       this.$gsap.to(".counterEven", {
         yPercent: -30,

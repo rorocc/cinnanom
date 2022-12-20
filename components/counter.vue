@@ -1,7 +1,7 @@
 <template>
   <div class="relative content-center counterContainer">
     <div class="relative z-10">
-      <div class="counter" />
+      <div class="counter">{{max}}</div>
       <div class="description">
         <p> {{ description }} </p>
       </div>
@@ -40,7 +40,7 @@ export default {
     inherits: false;
   }
   .counter {
-    animation: counter 1.5s forwards ease-in-out;
+    animation: none 1.5s forwards ease-in-out;
     counter-reset: num var(--num);
     font-family: 'Playfair Display', serif;
     padding: 2rem;
@@ -49,7 +49,7 @@ export default {
   }
 
   .counter::after {
-    content: counter(num);
+    /*content: counter(num);*/
   }
 
   @keyframes counter {
