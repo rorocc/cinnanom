@@ -1,7 +1,7 @@
 <template>
- <div class="card flex md:flex-nowrap flex-wrap">
+ <div class="card flex md:flex-nowrap flex-wrap no-flickr">
    <div class="cardImg flex-none cursor-pointer" @click="$emit('open', id)" v-bind:style="getOptimizedImage(id)">
-     <div class="tag">{{ rating.toFixed(1) }}</div>
+     <div class="tag"><span>{{ rating.toFixed(1) }}</span></div>
    </div>
    <div class="w-full relative px-8 pt-6 justify-between ">
      <div class="data-block grid grid-cols-2 uppercase tracking-wider">
@@ -96,7 +96,23 @@ export default {
     overflow: hidden;
     width: 532px;
     height: 232px;
-    @apply rounded-2xl text-sm;
+    transition: .5s;
+    @apply rounded-2xl text-sm scale-0;
+  }
+
+  .card:hover{
+    transform: scale(105%);
+    @apply shadow-xl;
+  }
+
+  .no-flickr {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
   }
 
   .cardImg{
@@ -108,10 +124,16 @@ export default {
   }
 
   .tag{
-    background-color: #FFF3E8;
     color: #724012;
     font-family: 'Playfair Display', serif;
-    @apply rounded-full p-4 w-14 h-14 m-4 text-2xl proportional-nums;
+    background-image: url("~/static/ribbon.svg");
+    background-position: center;
+    background-size: cover;
+    @apply rounded-full w-14 h-14 m-4 text-2xl proportional-nums justify-center grid;
+  }
+
+  .tag span{
+    @apply self-center my-auto ;
   }
 
   .cardBottom{
