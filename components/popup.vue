@@ -22,7 +22,7 @@
         </svg>
         <div class="side-right-top flex">
             <div class="text-left justify-center inline-flex mt-4 ml-4">
-              <div class="rating">{{ data.data.rating.toFixed(1) }}</div>
+              <rating-badge :darker="true">{{data.data.rating.toFixed(1)}}</rating-badge>
               <div class="my-auto">
                 <h1 class="text-2xl "> {{data.data.bakery}} </h1>
                 <h2 class="text-lg" v-if="data.data['location_name']"> {{ data.data['location_name'] }}</h2>
@@ -31,7 +31,7 @@
         </div>
         <img class="w-full" src="~/static/dividerTop.svg" />
         <div class="side-right-content mx-auto">
-          <div class="description mb-4 leading-loose max-w-prose">
+          <div class="description mt-4 mb-12 leading-loose max-w-prose">
             {{ data.data.comment }}
           </div>
           <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 justify-around">
@@ -90,19 +90,19 @@ export default {
 
   .popup-inner{
     background-color: var(--bg-light);
-    @apply md:w-4/5 w-11/12 max-h-screen overflow-x-hidden m-auto rounded-2xl md:grid grid-rows-2 md:grid-cols-2 gap-0;
+    @apply md:w-4/5 w-11/12 max-h-screen overflow-x-hidden m-auto rounded-2xl md:grid grid-rows-2 md:grid-cols-3 gap-0;
   }
 
   .side-img, .side-map{
     border-right: 4px solid #FFF3E8;
     background-size: cover;
     background-position: center;
-    width: 332px;
-    height: 332px;
+    aspect-ratio: 1/1;
+    @apply w-full;
   }
 
   .side-left{
-    @apply grid md:grid-cols-none grid-cols-2;
+    @apply grid md:grid-cols-none md:col-span-1;
   }
 
   .side-right-content{
@@ -115,7 +115,7 @@ export default {
   }
 
   .side-right{
-    @apply w-full h-full;
+    @apply w-full h-full md:col-span-2;
   }
 
   .rating{

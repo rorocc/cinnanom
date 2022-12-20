@@ -1,7 +1,7 @@
 <template>
  <div class="card flex md:flex-nowrap flex-wrap no-flickr">
    <div class="cardImg flex-none cursor-pointer" @click="$emit('open', id)" v-bind:style="getOptimizedImage(id)">
-     <div class="tag"><span>{{ rating.toFixed(1) }}</span></div>
+     <rating-badge>{{rating.toFixed(1)}}</rating-badge>
    </div>
    <div class="w-full relative px-8 pt-6 justify-between ">
      <div class="data-block grid grid-cols-2 uppercase tracking-wider">
@@ -121,19 +121,6 @@ export default {
     background-position: center;
     width: 232px;
     height: 232px;
-  }
-
-  .tag{
-    color: #724012;
-    font-family: 'Playfair Display', serif;
-    background-image: url("~/static/ribbon.svg");
-    background-position: center;
-    background-size: cover;
-    @apply rounded-full w-14 h-14 m-4 text-2xl proportional-nums justify-center grid;
-  }
-
-  .tag span{
-    @apply self-center my-auto ;
   }
 
   .cardBottom{
