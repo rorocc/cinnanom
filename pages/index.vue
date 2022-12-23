@@ -14,7 +14,7 @@
             <small-bun class="w-28 absolute top-56 left-20" />
           </div>
         </div>
-        <div class="grid md:grid-flow-col-dense grid-flow-row-dense justify-center">
+        <div class="grid md:grid-flow-col-dense py-6 grid-pill grid-flow-row-dense justify-center rounded-full">
           <bun class="w-56 mx-16 logo" />
           <div class="self-center text-center">
             <h1 class="title">cinna<span>nom</span></h1>
@@ -282,6 +282,11 @@ export default {
 
   header{
     background-color: var(--bg-dark);
+  }
+
+  .grid-pill{
+    background-color: #FFF3E8;
+    @apply bg-none md:w-full;
   }
 
   footer{
